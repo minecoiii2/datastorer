@@ -558,7 +558,7 @@ function queueHeartbeat()
 
 	if success then
 		if isLoad then
-			keystore.LastChecksum = keystore:checksum()
+			keystore.LastChecksum = checksum.any(keystore.Data)
 		end
 
 		-- remove the first queue item, we're done with it
