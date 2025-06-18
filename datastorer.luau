@@ -88,7 +88,7 @@ export type Store = {
 	CreateKey: (Store, key: string, userIds: {number}?) -> KeyStore,
 	ReleaseAllKeys: (Store, emergency: boolean?) -> nil,
 	GetKey: (Store, key: string) -> KeyStore,
-	DoesKeyExist: (Store, key: string) -> boolean,
+	IsKeyLoaded: (Store, key: string) -> boolean,
 }
 
 type PrivateStore = Store & {
